@@ -1,0 +1,19 @@
+{
+  "presets": [ "next/babel" ],
+  "plugins": [
+    [
+      "css-modules-transform", {
+        "extensions": [".css", ".sass", ".scss"],
+        "generateScopedName": "[hash:8]",
+        "append": [ "postcss-cssnext" ],
+        "devMode": true,
+        // "extractCss": "./static/css/bundle.css",
+        "extractCss": {
+          "dir": "./static/css/",
+          "filename": "[path]/[name].css"
+        }
+        // "preprocessCss": "./pre-processor.js"
+      }
+    ]
+  ]
+}
